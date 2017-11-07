@@ -2,6 +2,7 @@ from tkinter import *
 import tkinter.messagebox
 from MadLib import MadLib
 from Story import Story
+
 from tkinter import font
 
 class GUI(Frame):
@@ -13,6 +14,12 @@ class GUI(Frame):
         self.readMyStoryLabel = Label(self, text="readMyStory", font=("Courier", 30))
         # self.readMyStoryLabel.grid(row=0, column=2)
         self.readMyStoryLabel.grid()
+
+        img = PhotoImage(Image.open("bookEmoji.png"))
+        panel = Label(self, image=img)
+        self.panel.grid()
+
+
         self.infoText1 = Label(self, text="You have the option of creating your own story or \n "
                                           "filling in a MadLibs that will then be read out for you \n"
                                           "at the end! You will even get the option to \n"
